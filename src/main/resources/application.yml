@@ -6,8 +6,9 @@ spring:
   cloud:
     config:
       server:
-        native:
-          search-locations:
-
+        git:
+          uri: https://github.com/rezacomplete/microservices-config.git
+          clone-on-start: true
+          default-label: main
 server:
   port: 8083
