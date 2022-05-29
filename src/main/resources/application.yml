@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: configserver
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        native:
+          search-locations:
+
+server:
+  port: 8083
