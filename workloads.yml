@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: configserver
+spec:
+  selector:
+    matchLabels:
+      app: configserver
+  replicas: 1
+  template: #template for the pods
+    metadata:
+      labels:
+        app: configserver
+    spec:
+      containers:
+        - name: configserver
+          image: rezacomplete/configserver
